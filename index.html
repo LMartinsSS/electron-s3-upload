@@ -1,0 +1,11 @@
+<button id="showWindowButton">Mostrar Janela</button>
+
+<script>
+    const { ipcRenderer } = require('electron');
+
+    const showWindowButton = document.getElementById('showWindowButton');
+
+    showWindowButton.addEventListener('click', () => {
+        ipcRenderer.send('show-window');
+    });
+</script>
